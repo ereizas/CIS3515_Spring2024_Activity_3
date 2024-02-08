@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Spinner
 
-class TextSizeAdapter(context:Context, widget_ID: Int,arr:Array<Int>) : BaseAdapter() {
+class TextSizeAdapter(context:Context, widget_ID: Int,val arr:Array<Int>) : BaseAdapter() {
 
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return arr.size
     }
 
     override fun getItem(position: Int): Any {
