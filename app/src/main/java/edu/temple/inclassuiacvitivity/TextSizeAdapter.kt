@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Spinner
+import android.widget.TextView
 
-class TextSizeAdapter(context:Context, widget_ID: Int,val arr:Array<Int>) : BaseAdapter() {
+class TextSizeAdapter(val context:Context, widget_ID: Int,val arr:Array<Int>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return arr.size
@@ -21,7 +22,20 @@ class TextSizeAdapter(context:Context, widget_ID: Int,val arr:Array<Int>) : Base
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        TODO("Not yet implemented")
+        val textView : TextView
+        if (convertView != null)
+        {
+            textView = convertView as TextView
+        }
+        else
+        {
+            textView = TextView(context)
+            textView.textSize = 22f
+            textView.setPadding(5, 10, 0, 10)
+        }
+        textView.text=arr[position].toString()
+        textView.textSize=arr[position].toFloat()
+        return textView
     }
 
 }
