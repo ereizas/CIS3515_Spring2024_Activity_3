@@ -1,10 +1,12 @@
 package edu.temple.inclassuiacvitivity
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Spinner
 
-class TextSizeAdapter : BaseAdapter() {
+class TextSizeAdapter(context:Context, widget_ID: Int,arr:Array<Int>) : BaseAdapter() {
 
     override fun getCount(): Int {
         TODO("Not yet implemented")
