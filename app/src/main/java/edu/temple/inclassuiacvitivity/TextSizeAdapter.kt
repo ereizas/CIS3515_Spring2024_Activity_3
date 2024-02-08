@@ -13,7 +13,7 @@ class TextSizeAdapter(context:Context, widget_ID: Int,val arr:Array<Int>) : Base
     }
 
     override fun getItem(position: Int): Any {
-        TODO("Not yet implemented")
+        return arr[position]
     }
 
     override fun getItemId(position: Int): Long {
